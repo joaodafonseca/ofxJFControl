@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1437EF3D1AD7067F00FA16CC /* ofxJFControlPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1437EF3B1AD7067F00FA16CC /* ofxJFControlPanel.cpp */; };
+		14EB4FF51AD7102300562436 /* ofxJFButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FE31AD7102300562436 /* ofxJFButton.cpp */; };
+		14EB4FF61AD7102300562436 /* ofxJFControlGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FE61AD7102300562436 /* ofxJFControlGroup.cpp */; };
+		14EB4FF71AD7102300562436 /* ofxJFControlPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FE81AD7102300562436 /* ofxJFControlPanel.cpp */; };
+		14EB4FF81AD7102300562436 /* ofxJFEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FEA1AD7102300562436 /* ofxJFEvent.cpp */; };
+		14EB4FF91AD7102300562436 /* ofxJFLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FED1AD7102300562436 /* ofxJFLabel.cpp */; };
+		14EB4FFA1AD7102300562436 /* ofxJFNumberBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FEF1AD7102300562436 /* ofxJFNumberBox.cpp */; };
+		14EB4FFB1AD7102300562436 /* ofxJFSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FF11AD7102300562436 /* ofxJFSlider.cpp */; };
+		14EB4FFC1AD7102300562436 /* ofxJFWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FF31AD7102300562436 /* ofxJFWidget.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -60,24 +67,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1437EF261AD7050900FA16CC /* ofxJFEvent.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFEvent.cpp; sourceTree = "<group>"; };
-		1437EF271AD7050900FA16CC /* ofxJFEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxJFEvent.h; sourceTree = "<group>"; };
-		1437EF2B1AD7050900FA16CC /* ofxJFColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxJFColors.h; sourceTree = "<group>"; };
-		1437EF2C1AD7050900FA16CC /* ofxJFIncludes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxJFIncludes.h; sourceTree = "<group>"; };
-		1437EF2E1AD7050900FA16CC /* ofxJFButton.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFButton.cpp; sourceTree = "<group>"; };
-		1437EF2F1AD7050900FA16CC /* ofxJFButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxJFButton.h; sourceTree = "<group>"; };
-		1437EF301AD7050900FA16CC /* ofxJFLabel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFLabel.cpp; sourceTree = "<group>"; };
-		1437EF311AD7050900FA16CC /* ofxJFLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxJFLabel.h; sourceTree = "<group>"; };
-		1437EF321AD7050900FA16CC /* ofxJFNumberBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFNumberBox.cpp; sourceTree = "<group>"; };
-		1437EF331AD7050900FA16CC /* ofxJFNumberBox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxJFNumberBox.h; sourceTree = "<group>"; };
-		1437EF341AD7050900FA16CC /* ofxJFSlider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFSlider.cpp; sourceTree = "<group>"; };
-		1437EF351AD7050900FA16CC /* ofxJFSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxJFSlider.h; sourceTree = "<group>"; };
-		1437EF361AD7050900FA16CC /* ofxJFWidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFWidget.cpp; sourceTree = "<group>"; };
-		1437EF371AD7050900FA16CC /* ofxJFWidget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxJFWidget.h; sourceTree = "<group>"; };
-		1437EF391AD7063C00FA16CC /* ofxJFControlGroup.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFControlGroup.cpp; sourceTree = "<group>"; };
-		1437EF3A1AD7063C00FA16CC /* ofxJFControlGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxJFControlGroup.h; sourceTree = "<group>"; };
-		1437EF3B1AD7067F00FA16CC /* ofxJFControlPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFControlPanel.cpp; sourceTree = "<group>"; };
-		1437EF3C1AD7067F00FA16CC /* ofxJFControlPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFControlPanel.h; sourceTree = "<group>"; };
+		14EB4FE31AD7102300562436 /* ofxJFButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFButton.cpp; sourceTree = "<group>"; };
+		14EB4FE41AD7102300562436 /* ofxJFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFButton.h; sourceTree = "<group>"; };
+		14EB4FE51AD7102300562436 /* ofxJFColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFColors.h; sourceTree = "<group>"; };
+		14EB4FE61AD7102300562436 /* ofxJFControlGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFControlGroup.cpp; sourceTree = "<group>"; };
+		14EB4FE71AD7102300562436 /* ofxJFControlGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFControlGroup.h; sourceTree = "<group>"; };
+		14EB4FE81AD7102300562436 /* ofxJFControlPanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFControlPanel.cpp; sourceTree = "<group>"; };
+		14EB4FE91AD7102300562436 /* ofxJFControlPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFControlPanel.h; sourceTree = "<group>"; };
+		14EB4FEA1AD7102300562436 /* ofxJFEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFEvent.cpp; sourceTree = "<group>"; };
+		14EB4FEB1AD7102300562436 /* ofxJFEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFEvent.h; sourceTree = "<group>"; };
+		14EB4FEC1AD7102300562436 /* ofxJFIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFIncludes.h; sourceTree = "<group>"; };
+		14EB4FED1AD7102300562436 /* ofxJFLabel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFLabel.cpp; sourceTree = "<group>"; };
+		14EB4FEE1AD7102300562436 /* ofxJFLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFLabel.h; sourceTree = "<group>"; };
+		14EB4FEF1AD7102300562436 /* ofxJFNumberBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFNumberBox.cpp; sourceTree = "<group>"; };
+		14EB4FF01AD7102300562436 /* ofxJFNumberBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFNumberBox.h; sourceTree = "<group>"; };
+		14EB4FF11AD7102300562436 /* ofxJFSlider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFSlider.cpp; sourceTree = "<group>"; };
+		14EB4FF21AD7102300562436 /* ofxJFSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFSlider.h; sourceTree = "<group>"; };
+		14EB4FF31AD7102300562436 /* ofxJFWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFWidget.cpp; sourceTree = "<group>"; };
+		14EB4FF41AD7102300562436 /* ofxJFWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFWidget.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -130,61 +137,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1437EF241AD7050900FA16CC /* ofxJFControl */ = {
+		14EB4FFD1AD7107900562436 /* ofxJFControl */ = {
 			isa = PBXGroup;
 			children = (
-				1437EF381AD7063C00FA16CC /* group and panel */,
-				1437EF2D1AD7050900FA16CC /* widgets */,
-				1437EF251AD7050900FA16CC /* events */,
-				1437EF2A1AD7050900FA16CC /* utils */,
+				14EB4FFE1AD7109D00562436 /* widgets */,
+				14EB4FFF1AD710B500562436 /* utils */,
+				14EB50001AD710BE00562436 /* groups and panel */,
+				14EB50011AD710D000562436 /* events */,
 			);
-			path = ofxJFControl;
+			name = ofxJFControl;
 			sourceTree = "<group>";
 		};
-		1437EF251AD7050900FA16CC /* events */ = {
+		14EB4FFE1AD7109D00562436 /* widgets */ = {
 			isa = PBXGroup;
 			children = (
-				1437EF261AD7050900FA16CC /* ofxJFEvent.cpp */,
-				1437EF271AD7050900FA16CC /* ofxJFEvent.h */,
+				14EB4FF31AD7102300562436 /* ofxJFWidget.cpp */,
+				14EB4FF41AD7102300562436 /* ofxJFWidget.h */,
+				14EB4FF11AD7102300562436 /* ofxJFSlider.cpp */,
+				14EB4FF21AD7102300562436 /* ofxJFSlider.h */,
+				14EB4FED1AD7102300562436 /* ofxJFLabel.cpp */,
+				14EB4FEE1AD7102300562436 /* ofxJFLabel.h */,
+				14EB4FE31AD7102300562436 /* ofxJFButton.cpp */,
+				14EB4FE41AD7102300562436 /* ofxJFButton.h */,
+				14EB4FEF1AD7102300562436 /* ofxJFNumberBox.cpp */,
+				14EB4FF01AD7102300562436 /* ofxJFNumberBox.h */,
 			);
-			path = events;
+			name = widgets;
 			sourceTree = "<group>";
 		};
-		1437EF2A1AD7050900FA16CC /* utils */ = {
+		14EB4FFF1AD710B500562436 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				1437EF2B1AD7050900FA16CC /* ofxJFColors.h */,
-				1437EF2C1AD7050900FA16CC /* ofxJFIncludes.h */,
+				14EB4FE51AD7102300562436 /* ofxJFColors.h */,
+				14EB4FEC1AD7102300562436 /* ofxJFIncludes.h */,
 			);
-			path = utils;
+			name = utils;
 			sourceTree = "<group>";
 		};
-		1437EF2D1AD7050900FA16CC /* widgets */ = {
+		14EB50001AD710BE00562436 /* groups and panel */ = {
 			isa = PBXGroup;
 			children = (
-				1437EF2E1AD7050900FA16CC /* ofxJFButton.cpp */,
-				1437EF2F1AD7050900FA16CC /* ofxJFButton.h */,
-				1437EF301AD7050900FA16CC /* ofxJFLabel.cpp */,
-				1437EF311AD7050900FA16CC /* ofxJFLabel.h */,
-				1437EF321AD7050900FA16CC /* ofxJFNumberBox.cpp */,
-				1437EF331AD7050900FA16CC /* ofxJFNumberBox.h */,
-				1437EF341AD7050900FA16CC /* ofxJFSlider.cpp */,
-				1437EF351AD7050900FA16CC /* ofxJFSlider.h */,
-				1437EF361AD7050900FA16CC /* ofxJFWidget.cpp */,
-				1437EF371AD7050900FA16CC /* ofxJFWidget.h */,
+				14EB4FE61AD7102300562436 /* ofxJFControlGroup.cpp */,
+				14EB4FE71AD7102300562436 /* ofxJFControlGroup.h */,
+				14EB4FE81AD7102300562436 /* ofxJFControlPanel.cpp */,
+				14EB4FE91AD7102300562436 /* ofxJFControlPanel.h */,
 			);
-			path = widgets;
+			name = "groups and panel";
 			sourceTree = "<group>";
 		};
-		1437EF381AD7063C00FA16CC /* group and panel */ = {
+		14EB50011AD710D000562436 /* events */ = {
 			isa = PBXGroup;
 			children = (
-				1437EF391AD7063C00FA16CC /* ofxJFControlGroup.cpp */,
-				1437EF3A1AD7063C00FA16CC /* ofxJFControlGroup.h */,
-				1437EF3B1AD7067F00FA16CC /* ofxJFControlPanel.cpp */,
-				1437EF3C1AD7067F00FA16CC /* ofxJFControlPanel.h */,
+				14EB4FEA1AD7102300562436 /* ofxJFEvent.cpp */,
+				14EB4FEB1AD7102300562436 /* ofxJFEvent.h */,
 			);
-			path = "group and panel";
+			name = events;
 			sourceTree = "<group>";
 		};
 		BB4B014C10F69532006C3DED /* addons */ = {
@@ -259,7 +266,7 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				1437EF241AD7050900FA16CC /* ofxJFControl */,
+				14EB4FFD1AD7107900562436 /* ofxJFControl */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -360,7 +367,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1437EF3D1AD7067F00FA16CC /* ofxJFControlPanel.cpp in Sources */,
+				14EB4FF51AD7102300562436 /* ofxJFButton.cpp in Sources */,
+				14EB4FFB1AD7102300562436 /* ofxJFSlider.cpp in Sources */,
+				14EB4FF61AD7102300562436 /* ofxJFControlGroup.cpp in Sources */,
+				14EB4FFA1AD7102300562436 /* ofxJFNumberBox.cpp in Sources */,
+				14EB4FF81AD7102300562436 /* ofxJFEvent.cpp in Sources */,
+				14EB4FFC1AD7102300562436 /* ofxJFWidget.cpp in Sources */,
+				14EB4FF91AD7102300562436 /* ofxJFLabel.cpp in Sources */,
+				14EB4FF71AD7102300562436 /* ofxJFControlPanel.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 			);
