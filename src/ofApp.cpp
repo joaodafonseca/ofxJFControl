@@ -6,9 +6,9 @@ void ofApp::setup(){
     ofSetCircleResolution(20);
     ofEnableAntiAliasing();
     
-    slider = ofxJFSlider("slider 1", 0, 300, 10, 10, 260, 50);
-    slider2 = ofxJFSlider("slider 2", 0, 300, 10, 60, 260, 50);
-    slider3 = ofxJFSlider("slider 2", 0, 300, 10, 110, 260, 50);
+    slider = ofxJFSlider("slider 1", 0, 300, 5, 10, 260, 48);
+    slider2 = ofxJFSlider("slider 2", 0, 300, 5, 58, 260, 48);
+    slider3 = ofxJFSlider("slider 2", 0, 300, 5, 106, 260, 48);
     
    
     
@@ -25,6 +25,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+    ofBackground(42, 48, 67);
     
     slider.drawController();
     slider2.drawController();
