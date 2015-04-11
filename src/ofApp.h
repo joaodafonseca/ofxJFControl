@@ -21,5 +21,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		
         ofxJFSlider slider;
-    
+        ofxJFSlider slider2;
+        ofxJFSlider slider3;
+        ofxJFNumberBox nb;
 };

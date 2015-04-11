@@ -15,6 +15,7 @@
 		14EB4FFA1AD7102300562436 /* ofxJFNumberBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FEF1AD7102300562436 /* ofxJFNumberBox.cpp */; };
 		14EB4FFB1AD7102300562436 /* ofxJFSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FF11AD7102300562436 /* ofxJFSlider.cpp */; };
 		14EB4FFC1AD7102300562436 /* ofxJFWidget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14EB4FF31AD7102300562436 /* ofxJFWidget.cpp */; };
+		14FCB99A1AD93E180078FAAE /* ofxJFMultiSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14FCB9981AD93E180078FAAE /* ofxJFMultiSlider.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -85,6 +86,8 @@
 		14EB4FF21AD7102300562436 /* ofxJFSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFSlider.h; sourceTree = "<group>"; };
 		14EB4FF31AD7102300562436 /* ofxJFWidget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFWidget.cpp; sourceTree = "<group>"; };
 		14EB4FF41AD7102300562436 /* ofxJFWidget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFWidget.h; sourceTree = "<group>"; };
+		14FCB9981AD93E180078FAAE /* ofxJFMultiSlider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFMultiSlider.cpp; sourceTree = "<group>"; };
+		14FCB9991AD93E180078FAAE /* ofxJFMultiSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFMultiSlider.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -153,6 +156,8 @@
 			children = (
 				14EB4FF31AD7102300562436 /* ofxJFWidget.cpp */,
 				14EB4FF41AD7102300562436 /* ofxJFWidget.h */,
+				14FCB9981AD93E180078FAAE /* ofxJFMultiSlider.cpp */,
+				14FCB9991AD93E180078FAAE /* ofxJFMultiSlider.h */,
 				14EB4FF11AD7102300562436 /* ofxJFSlider.cpp */,
 				14EB4FF21AD7102300562436 /* ofxJFSlider.h */,
 				14EB4FED1AD7102300562436 /* ofxJFLabel.cpp */,
@@ -374,6 +379,7 @@
 				14EB4FF81AD7102300562436 /* ofxJFEvent.cpp in Sources */,
 				14EB4FFC1AD7102300562436 /* ofxJFWidget.cpp in Sources */,
 				14EB4FF91AD7102300562436 /* ofxJFLabel.cpp in Sources */,
+				14FCB99A1AD93E180078FAAE /* ofxJFMultiSlider.cpp in Sources */,
 				14EB4FF71AD7102300562436 /* ofxJFControlPanel.cpp in Sources */,
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,

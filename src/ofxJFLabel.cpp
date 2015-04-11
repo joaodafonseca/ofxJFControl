@@ -17,10 +17,10 @@ ofxJFLabel::ofxJFLabel(){
 void ofxJFLabel::addLabel(string _label, ofPoint _location){
     
     label=_label;
-    location=_location;
+    labelLocation=_location;
     
     ofTrueTypeFont::setGlobalDpi(72);
-    font.loadFont("font/helvetica.ttf", 13, true, true);
+    font.loadFont("font/helvetica.ttf", 14, true, true);
     //font.setLineHeight(18.0f);
     //font.setLetterSpacing(1.037);
     drawFont=true;
@@ -35,7 +35,7 @@ void ofxJFLabel::setAlignment(int _alignment){
 
 void ofxJFLabel::setLPosition(ofPoint _labelLocation){
 
-    location=_labelLocation;
+    labelLocation=_labelLocation;
 }
 
 void ofxJFLabel::setLabel(string _label){
@@ -53,18 +53,18 @@ void ofxJFLabel::drawLabel(){
         ofPoint alignmentLoaction;
         
         if(alignment==0){
-            alignmentLoaction.x=location.x;
-            alignmentLoaction.y=location.y+(bounds.height/2);
+            alignmentLoaction.x=labelLocation.x;
+            alignmentLoaction.y=labelLocation.y+(bounds.height/2);
         
         }else if(alignment==1){
             
-            alignmentLoaction.x=location.x-(bounds.width/2);
-            alignmentLoaction.y=location.y+(bounds.height/2);
+            alignmentLoaction.x=labelLocation.x-(bounds.width/2);
+            alignmentLoaction.y=labelLocation.y+(bounds.height/2);
             
          }else if(alignment==2){
             
-            alignmentLoaction.x=location.x-(bounds.width);
-            alignmentLoaction.y=location.y+(bounds.height/2);
+            alignmentLoaction.x=labelLocation.x-(bounds.width);
+            alignmentLoaction.y=labelLocation.y+(bounds.height/2);
         }
 
 
@@ -72,4 +72,12 @@ void ofxJFLabel::drawLabel(){
         font.drawString(label, alignmentLoaction.x,alignmentLoaction.y);
         ofPopStyle();
     }
+}
+
+
+ofRectangle ofxJFLabel::getBoundingBox(){
+    
+    ofRectangle bounds = font.getStringBoundingBox(label, 0, 0);
+    return font.getStringBoundingBox(label, labelLocation.x-(bounds.width), labelLocation.y+(bounds.height/2));
+
 }

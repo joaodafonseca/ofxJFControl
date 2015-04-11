@@ -34,16 +34,17 @@ public:
     virtual void keyPressed(int key);
     virtual void keyReleased(int key);
     
-    ofxJFLabel numberLabel;
-    
-    ofPoint location;
-    ofVec2f size;
+
     ofPoint mousePressedLocation;
     int precision;
     string inputValue;
     
     
     bool updatedInputValue;
+    
+    
+    int boxPositionX;
+    int boxPositionY;
     
     
 };

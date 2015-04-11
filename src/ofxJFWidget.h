@@ -27,12 +27,17 @@ public:
     virtual void drawController();
     virtual void update();
     
+    string name;
     float value;
     float max;
     float min;
+    
+    ofPoint location;
+    ofVec2f size;
+    
     bool updateValue;
     bool labelIsVisible;
-    string name;
+  
     int totalHeight;
     bool maximize;
     bool minimize;

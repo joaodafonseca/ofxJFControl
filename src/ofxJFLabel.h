@@ -25,11 +25,16 @@ public:
     void setLPosition(ofPoint _labelLocation);
     void drawLabel();
     
+    ofRectangle getBoundingBox();
+    
     string  label;
-    ofPoint location;
+   
     
     ofTrueTypeFont  font;
     int alignment;
     
     bool drawFont;
+    
+private:
+     ofPoint labelLocation;
 };

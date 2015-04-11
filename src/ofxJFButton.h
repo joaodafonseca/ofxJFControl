@@ -28,8 +28,7 @@ public:
     virtual void mouseReleased(int x, int y, int button);
     
     
-    ofPoint location;
-    ofVec2f size;
+
     
     ofxJFLabel state;
     
