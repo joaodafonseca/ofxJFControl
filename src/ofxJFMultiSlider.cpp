@@ -78,7 +78,7 @@ void ofxJFMultiSlider::drawController(){
         
         ofSetColor(panelColor);
         ofLine(location.x, location.y, location.x+size.x, location.y);
-        ofLine(location.x, location.y+totalHeight, location.x+size.x, location.y+totalHeight);
+        ofLine(location.x, location.y+totalHeight-1, location.x+size.x, location.y+totalHeight-1);
 
     }else{
         
@@ -137,7 +137,7 @@ void ofxJFMultiSlider::mousePressed(int x, int y, int button){
         minimize=true;
         
         for (int i = 0; i< sliders.size(); i++) {
-            sliders[i]->disableKeyEvents();
+            sliders[i]->disableMouseEvents();
         }
         
     }

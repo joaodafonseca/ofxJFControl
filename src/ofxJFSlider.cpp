@@ -67,6 +67,9 @@ void ofxJFSlider::setLabelPosition(ofPoint _labelLocation){
 void ofxJFSlider::setLocation(ofPoint _location){
 
     location=_location;
+    sliderLocationX=location.x+sliderOffsetX;
+    sliderLocationY=location.y+(size.y-sliderOffsetY);
+    
     setEventArea(ofPoint(sliderLocationX,sliderLocationY-(handleRadius)), ofVec2f(sliderWidth,handleRadius*2));
     setLPosition(ofPoint(location.x+sliderOffsetX,location.y+sliderOffsetY));
     nb.setLocation(ofPoint(sliderLocationX+sliderWidth, location.y+sliderOffsetY));
