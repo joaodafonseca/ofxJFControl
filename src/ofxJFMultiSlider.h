@@ -8,8 +8,10 @@
 
 #pragma once
 #include "ofxJFWidget.h"
+#include "ofxJFSlider.h"
+#include "ofxJFLabel.h"
 
-class ofxJFMultiSlider {
+class ofxJFMultiSlider: public ofxJFWidget, ofxJFLabel{
     
 public:
     ofxJFMultiSlider();
@@ -27,5 +29,11 @@ public:
     void mousePressed(int x, int y, int button);
     void mouseDragged(int x, int y, int button);
     void mouseReleased(int x, int y, int button);
+    
+    int sliderPositionY;
+    int sliderHeight;
+    int  sliderOffsetX;
+    bool isMaximized;
+    vector<ofxJFWidget *> sliders;
     
 };

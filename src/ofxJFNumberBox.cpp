@@ -60,8 +60,10 @@ ofxJFNumberBox::ofxJFNumberBox(string _name, float _min, float _max, int _x, int
 void ofxJFNumberBox::setLocation(ofPoint _location){
     
     location=_location;
-    setEventArea(location, size);
-    setLPosition(ofPoint(location.x+(size.x)-5,location.y+(size.y/2)));
+    ofRectangle bounds=getBoundingBox();
+    setEventArea(ofPoint(bounds.x,bounds.y), ofVec2f(bounds.width,bounds.height));
+
+    setLPosition(ofPoint(location.x,location.y));
 }
 
 

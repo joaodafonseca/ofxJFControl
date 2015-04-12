@@ -48,7 +48,7 @@ void ofxJFLabel::drawLabel(){
     
     if(drawFont){
         ofPushStyle();
-        ofSetColor(COLOR_LABEL);
+        ofSetColor(255);
         ofRectangle bounds = font.getStringBoundingBox(label, 0, 0);
         ofPoint alignmentLoaction;
         

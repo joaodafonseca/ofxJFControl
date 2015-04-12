@@ -14,6 +14,7 @@ ofxJFEvent::ofxJFEvent(){
     
     //enableMouseEvents();
     //enableKeyEvents();
+    lastClick=0;
 }
 
 //--------------------------------------------------------------

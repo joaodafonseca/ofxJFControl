@@ -8,9 +8,12 @@
 
 #pragma once
 
+
+
 #include "ofxJFEvent.h"
 #include "ofxJFLabel.h"
 #include "ofxJFSlider.h"
+#include "ofxJFMultiSlider.h"
 #include "ofxJFWidget.h"
 #include "ofxJFButton.h"
 #include "ofxJFNumberBox.h"

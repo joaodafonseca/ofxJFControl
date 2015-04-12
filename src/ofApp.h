@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxJFIncludes.h"
+#include "ofxJFControlGroup.h"
 
 class ofApp : public ofBaseApp{
 
@@ -20,8 +20,5 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-        ofxJFSlider slider;
-        ofxJFSlider slider2;
-        ofxJFSlider slider3;
-        ofxJFNumberBox nb;
+    ofxJFControlGroup cg;
 };

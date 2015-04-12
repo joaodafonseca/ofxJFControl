@@ -42,6 +42,7 @@ public:
     bool maximize;
     bool minimize;
     
+    ofColor panelColor;
     ofColor backgroundColor;
     ofColor sliderColor;
     ofColor handleColor;

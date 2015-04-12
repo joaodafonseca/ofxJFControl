@@ -57,13 +57,13 @@ void ofxJFButton::setLabelPosition(ofPoint _labelLocation){
 void ofxJFButton::drawController(){
     
     ofPushStyle();
-    ofSetColor(COLOR_BACKGROUND);
+    ofSetColor(PANEL_COLOR);
     ofRectRounded(location.x, location.y, size.x, size.y,5);
-    ofSetColor(COLOR_FILL);
+    ofSetColor(255);
     ofRectRounded(location.x, location.y, size.x*value, size.y,5);
     
     ofNoFill();
-    ofSetColor(COLOR_OUT_STORKE);
+    ofSetColor(0);
     ofRectRounded(location.x, location.y, size.x, size.y,5);
     
     drawLabel();

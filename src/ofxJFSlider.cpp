@@ -43,15 +43,17 @@ ofxJFSlider::ofxJFSlider(string _name, float _min, float _max, int _x, int _y, i
     setEventArea(ofPoint(sliderLocationX,sliderLocationY-(handleRadius)), ofVec2f(sliderWidth,handleRadius*2));
     enableMouseEvents();
  
-    backgroundColor=SLIDER_BACKGROUND_COLOR;
-    sliderColor=SLIDER_COLOR;
-    handleColor=SLIDER_HANDLE_COLOR;
+    backgroundColor = SLIDER_BACKGROUND_COLOR;
+    sliderColor = SLIDER_COLOR;
+    handleColor = SLIDER_HANDLE_COLOR;
     
     addLabel(name, ofPoint(location.x+sliderOffsetX,location.y+sliderOffsetY));
     
     nb = ofxJFNumberBox(name+"_numberBox", min, max, sliderLocationX+sliderWidth, location.y+sliderOffsetY, 0, sliderWidth/4, 20);
     
     updateValue=false;
+    
+    totalHeight=size.y;
     
 }
 
@@ -65,8 +67,10 @@ void ofxJFSlider::setLabelPosition(ofPoint _labelLocation){
 void ofxJFSlider::setLocation(ofPoint _location){
 
     location=_location;
-    setEventArea(location, size);
-    //setLPosition(location);
+    setEventArea(ofPoint(sliderLocationX,sliderLocationY-(handleRadius)), ofVec2f(sliderWidth,handleRadius*2));
+    setLPosition(ofPoint(location.x+sliderOffsetX,location.y+sliderOffsetY));
+    nb.setLocation(ofPoint(sliderLocationX+sliderWidth, location.y+sliderOffsetY));
+
 
 }
 
@@ -80,13 +84,13 @@ void ofxJFSlider::update(){
     //nb.update();
     
     if(updateValue){
-        value=getValue();
-        nb.setValue(value);
+        float tempValue=getValue();
+        nb.setValue(tempValue);
     }
     
     if(nb.updatedInputValue){
-        value=nb.getValue();
-        setValue(value);
+        float tempValue=nb.getValue();
+        setValue(tempValue);
         
     }
 
@@ -118,15 +122,15 @@ void ofxJFSlider::drawController(){
     ofSetColor(backgroundColor);
     ofRect(location.x, location.y, size.x, size.y);
     
-    nb.drawController();
-    drawLabel();
-    
     ofSetColor(sliderColor);
     ofRectRounded(sliderLocationX, sliderLocationY, sliderWidth, sliderHeight, 20);
     
     ofSetColor(handleColor);
     
     ofCircle(hadleLocationX+((sliderWidth-handleRadius)*value), hadleLocationY, handleRadius);
+    
+    nb.drawController();
+    drawLabel();
 
     ofPopStyle();
     
