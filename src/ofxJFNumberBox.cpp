@@ -53,17 +53,19 @@ ofxJFNumberBox::ofxJFNumberBox(string _name, float _min, float _max, int _x, int
    
     maximize=false;
     minimize=false;
-
+    updateValue=false;
+    updatedInputValue=false;
 }
 
 
 void ofxJFNumberBox::setLocation(ofPoint _location){
     
     location=_location;
+    setLPosition(ofPoint(location.x,location.y));
     ofRectangle bounds=getBoundingBox();
     setEventArea(ofPoint(bounds.x,bounds.y), ofVec2f(bounds.width,bounds.height));
 
-    setLPosition(ofPoint(location.x,location.y));
+    
 }
 
 
@@ -138,6 +140,7 @@ void ofxJFNumberBox::mouseReleased(int x, int y, int button){
         ofRectangle bounds=getBoundingBox();
         setEventArea(ofPoint(bounds.x,bounds.y), ofVec2f(bounds.width,bounds.height));
     }
+     
 }
 
 void ofxJFNumberBox::doubleClick(int x, int y, int button){

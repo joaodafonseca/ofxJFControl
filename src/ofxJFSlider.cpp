@@ -55,6 +55,11 @@ ofxJFSlider::ofxJFSlider(string _name, float _min, float _max, int _x, int _y, i
     
     totalHeight=size.y;
     
+    
+    
+    float tempValue=getValue();
+    nb.setValue(tempValue);
+    
 }
 
 void ofxJFSlider::setLabelPosition(ofPoint _labelLocation){
@@ -131,7 +136,7 @@ void ofxJFSlider::drawController(){
     ofSetColor(handleColor);
     
     ofCircle(hadleLocationX+((sliderWidth-handleRadius)*value), hadleLocationY, handleRadius);
-    
+        
     nb.drawController();
     drawLabel();
 

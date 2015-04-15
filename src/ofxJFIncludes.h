@@ -17,3 +17,5 @@
 #include "ofxJFWidget.h"
 #include "ofxJFButton.h"
 #include "ofxJFNumberBox.h"
+
+#include "ofxJFControlGroup.h"

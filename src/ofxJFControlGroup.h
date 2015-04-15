@@ -25,13 +25,18 @@ public:
     int initialWigetYlocation();
     void widgetMaximized(int _pos);
     void widgetMinimized(int _pos);
+    void setLocation(ofPoint _location);
     
-    void mousePressed(int x, int y, int button);//this should be double click
+    void mousePressed(int x, int y, int button);
     
     
     vector<ofxJFWidget *> controls;
     bool isMaximized;
     int widgetHeight;
+    
+    int maximizedHeight;
+    
+
 
     
 };

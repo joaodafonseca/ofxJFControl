@@ -7,22 +7,47 @@ void ofApp::setup(){
     ofEnableAntiAliasing();
     
     
-    cg = ofxJFControlGroup("group", 10, 10, 260);
-    cg.addSlider("slider 1", 0,100);
-    cg.addSlider("slider 2", 0,100);
-    cg.addMultiSlider("multi 1", 0, 100);
-    cg.addSlider("slider 3", 0,100);
-       cg.addSlider("slider 3", 0,100);
-    cg.addSlider("slider 1", 0,100);
-    cg.addSlider("slider 2", 0,100);
-    cg.addMultiSlider("multi 1", 0, 100);
-
+    panel = ofxJFControlPanel("ofxJFPanel", 10, 10, 280);
+    
+    panel.addGroup("Controls 1");
+    panel.addSlider("SLIDER1", 0, 550);
+    panel.addSlider("SLIDER2", 0, 550);
+    panel.addSlider("SLIDER3", 0, 550);
+    panel.addSlider("SLIDER4", 0, 550);
+    
+    panel.addGroup("Controls 2");
+    panel.addSlider("SLIDER1", 0, 550);
+    panel.addSlider("SLIDER2", 0, 550);
+    panel.addSlider("SLIDER3", 0, 550);
+    panel.addSlider("SLIDER4", 0, 550);
+    
+    panel.addGroup("Controls 3");
+    panel.addSlider("SLIDER1", 0, 550);
+    panel.addSlider("SLIDER2", 0, 550);
+    panel.addSlider("SLIDER3", 0, 550);
+    panel.addSlider("SLIDER4", 0, 550);
+    
+    
+    /*
+     cg = ofxJFControlGroup("group", 10, 10, 260);
+     cg.addSlider("slider 1", 0,100);
+     cg.addSlider("slider 2", 0,100);
+     cg.addMultiSlider("multi 1", 0, 100);
+     cg.addSlider("slider 3", 0,100);
+     cg.addSlider("slider 3", 0,100);
+     cg.addSlider("slider 1", 0,100);
+     cg.addSlider("slider 2", 0,100);
+     cg.addMultiSlider("multi 1", 0, 100);
+     cg.addSlider("slider 1", 0,100);
+     cg.addSlider("slider 2", 0,100);
+     */
+    
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    
-    cg.update();
+    ofSetWindowTitle(ofToString(ofGetFrameRate(), 1));
+    panel.update();
 }
 
 //--------------------------------------------------------------
@@ -30,8 +55,8 @@ void ofApp::draw(){
     
     ofBackground(255);
     
-    cg.drawController();
-
+    panel.drawController();
+    
 }
 
 //--------------------------------------------------------------
