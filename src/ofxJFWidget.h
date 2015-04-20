@@ -33,6 +33,7 @@ public:
     float min;
     
     ofPoint location;
+    ofPoint initialLocation;
     ofVec2f size;
     
     bool updateValue;

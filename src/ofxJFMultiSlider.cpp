@@ -23,7 +23,7 @@ ofxJFMultiSlider::ofxJFMultiSlider(string _name, float _min, float _max, int _x,
     
     location.set(_x, _y);
     
-    size.set(_width, _height/1.5);
+    size.set(_width, _height/1.6);
     
     setEventArea(location, size);
     enableMouseEvents();
@@ -49,6 +49,8 @@ ofxJFMultiSlider::ofxJFMultiSlider(string _name, float _min, float _max, int _x,
     isMaximized=false;
     maximize=false;
     minimize=false;
+    
+    initialLocation=location;
     
 }
 

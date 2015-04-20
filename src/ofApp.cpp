@@ -20,12 +20,23 @@ void ofApp::setup(){
     panel.addSlider("SLIDER2", 0, 550);
     panel.addSlider("SLIDER3", 0, 550);
     panel.addSlider("SLIDER4", 0, 550);
+    panel.addMultiSlider("MULTI SLIDER", 0, 200);
+    panel.addSlider("SLIDER3", 0, 550);
+    panel.addSlider("SLIDER4", 0, 550);
     
     panel.addGroup("Controls 3");
     panel.addSlider("SLIDER1", 0, 550);
     panel.addSlider("SLIDER2", 0, 550);
     panel.addSlider("SLIDER3", 0, 550);
     panel.addSlider("SLIDER4", 0, 550);
+    
+    panel.addGroup("Controls 4");
+    panel.addSlider("SLIDER1", 0, 550);
+    panel.addSlider("SLIDER2", 0, 550);
+    panel.addSlider("SLIDER3", 0, 550);
+    panel.addSlider("SLIDER4", 0, 550);
+    
+
     
     
     /*
@@ -53,7 +64,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    ofBackground(255);
+    ofBackground(225);
     
     panel.drawController();
     

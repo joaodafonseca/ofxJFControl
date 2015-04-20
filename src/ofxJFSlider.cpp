@@ -60,6 +60,7 @@ ofxJFSlider::ofxJFSlider(string _name, float _min, float _max, int _x, int _y, i
     float tempValue=getValue();
     nb.setValue(tempValue);
     
+    initialLocation=location;
 }
 
 void ofxJFSlider::setLabelPosition(ofPoint _labelLocation){

@@ -69,7 +69,8 @@ void ofxJFLabel::drawLabel(){
 
 
 
-        font.drawString(label, alignmentLoaction.x,alignmentLoaction.y);
+        //font.drawString(label, alignmentLoaction.x,alignmentLoaction.y);
+        ofDrawBitmapString(label, alignmentLoaction);
         ofPopStyle();
     }
 }
