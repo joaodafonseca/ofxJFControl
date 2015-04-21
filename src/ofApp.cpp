@@ -9,38 +9,42 @@ void ofApp::setup(){
     
     panel = ofxJFControlPanel("ofxJFPanel", 10, 10, 280);
     
-    panel.addGroup("Controls 1");
-    panel.addSlider("SLIDER1", 0, 550);
-    panel.addSlider("SLIDER2", 0, 550);
-    panel.addSlider("SLIDER3", 0, 550);
+    panel.createGroup("Controls 1");
+    panel.addSlider("slider1", 0, 550);
+    panel.addSlider("slider2", 0, 550);
+    panel.addSlider("slider3", 0, 550);
+    panel.addSlider("slider4", 0, 550);
+    
+    panel.createGroup("Controls 2");
+    panel.addSlider("slider1", 0, 550);
+    panel.addMultiSlider("multi slider", 0, 200);
+    panel.addMultiSlider("multi slider", 0, 200);
+    panel.addSlider("slider3", 0, 550);
+    panel.addSlider("slider4", 0, 550);
+    
+    panel.createGroup("Controls 3");
+    panel.addSlider("slider1", 0, 550);
+    panel.addSlider("slider1", 0, 550);
+    panel.addSlider("slider1", 0, 550);
     panel.addSlider("SLIDER4", 0, 550);
     
-    panel.addGroup("Controls 2");
-    panel.addSlider("SLIDER1", 0, 550);
-    panel.addSlider("SLIDER2", 0, 550);
-    panel.addSlider("SLIDER3", 0, 550);
-    panel.addSlider("SLIDER4", 0, 550);
-    panel.addMultiSlider("MULTI SLIDER", 0, 200);
-    panel.addSlider("SLIDER3", 0, 550);
-    panel.addSlider("SLIDER4", 0, 550);
+    panel.createGroup("Controls 4");
+    panel.addSlider("slider1", 0, 550);
+    panel.addSlider("slider1", 0, 550);
+    panel.addMultiSlider("multi slider1", 0, 200);
+    panel.addSlider("slider1", 0, 550);
+    panel.addSlider("slider1", 0, 550);
     
-    panel.addGroup("Controls 3");
-    panel.addSlider("SLIDER1", 0, 550);
-    panel.addSlider("SLIDER2", 0, 550);
-    panel.addSlider("SLIDER3", 0, 550);
-    panel.addSlider("SLIDER4", 0, 550);
-    
-    panel.addGroup("Controls 4");
-    panel.addSlider("SLIDER1", 0, 550);
-    panel.addSlider("SLIDER2", 0, 550);
-    panel.addSlider("SLIDER3", 0, 550);
-    panel.addSlider("SLIDER4", 0, 550);
-    
+    panel.createGroup("Controls 5");
+    panel.addSlider("slider1", 0, 550);
+    panel.addMultiSlider("multi slider1", 0, 200);
+    panel.addSlider("slider1", 0, 550);
+    panel.addSlider("slider1", 0, 550);
 
     
     
     /*
-     cg = ofxJFControlGroup("group", 10, 10, 260);
+     cg = ofxJFControlGroup("group", 300, 10, 260);
      cg.addSlider("slider 1", 0,100);
      cg.addSlider("slider 2", 0,100);
      cg.addMultiSlider("multi 1", 0, 100);
@@ -51,7 +55,16 @@ void ofApp::setup(){
      cg.addMultiSlider("multi 1", 0, 100);
      cg.addSlider("slider 1", 0,100);
      cg.addSlider("slider 2", 0,100);
-     */
+    cg.addSlider("slider 2", 0,100);
+    cg.addMultiSlider("multi 1", 0, 100);
+    cg.addSlider("slider 1", 0,100);
+    cg.addSlider("slider 2", 0,100);
+    cg.addMultiSlider("multi 1", 0, 100);
+    cg.addSlider("slider 1", 0,100);
+    cg.addSlider("slider 2", 0,100);
+    cg.addSlider("slider 2", 0,100);
+    
+    */
     
 }
 
@@ -59,14 +72,16 @@ void ofApp::setup(){
 void ofApp::update(){
     ofSetWindowTitle(ofToString(ofGetFrameRate(), 1));
     panel.update();
+    cg.update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     
-    ofBackground(225);
+    ofBackground(80);
     
     panel.drawController();
+    cg.drawController();
     
 }
 

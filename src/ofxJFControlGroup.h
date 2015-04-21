@@ -23,6 +23,7 @@ public:
     void update();
     
     int initialWigetYlocation();
+    void relocateControls(int _pos);
     void widgetMaximized(int _pos);
     void widgetMinimized(int _pos);
     void setLocation(ofPoint _location);
@@ -31,7 +32,7 @@ public:
     
     
     vector<ofxJFWidget *> controls;
-    bool isMaximized;
+
     int widgetHeight;
     
     int maximizedHeight;

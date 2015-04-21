@@ -37,22 +37,26 @@ ofxJFControlPanel::ofxJFControlPanel(string _name, int _x, int _y, int _width, i
     groupSize.set(size.x-(2*offsetX),size.y);
     
     addLabel(name, ofPoint(location.x+offsetX, location.y+(size.y/2)));
-    totalHeight=size.y;
+    totalHeight=0;
     
     initialLocation=location;
     
-    minimizedSize=size.y;
-    
+    maximizedSize=0;
+    tSize=0;
+    totalHeight=size.y;
+    maximizedSize=size.y;
 }
 
-void ofxJFControlPanel::addGroup(string _name){
+void ofxJFControlPanel::createGroup(string _name){
     
     
     groups.push_back(new ofxJFControlGroup(_name, groupLocation.x, groupLocation.y,groupSize.x));
     groupLocation.y+=groups[groups.size()-1]->totalHeight+offsetY;
     
     
-    size.y+=groups[groups.size()-1]->totalHeight+offsetY;
+    maximizedSize+=groups[groups.size()-1]->size.y+offsetY;
+    //totalHeight=maximizedSize;
+   // totalHeight=size.y;
 }
 
 
@@ -82,36 +86,33 @@ void ofxJFControlPanel::update(){
         
         groups[i]->update();
     }
+       cout<<maximizedSize<<endl;
 }
 
 
 void ofxJFControlPanel::relocateGroup(int _pos){
     
-    int relocation=0;
-    
     for (int i = _pos+1; i<groups.size(); i++) {
         
-        
-         relocation=0;
+        int relocation=0;
         
         for(int p = 0; p < i; p++){
             
             relocation+=groups[p]->totalHeight-groups[p]->size.y;
-            
-            
         }
-
         
         groups[i]->setLocation(ofPoint(groups[i]->location.x,relocation));
-        
     }
+
     
+    tSize=0;
     
-    int tSize=size.y;
     for(int i = 0; i < groups.size();i++){
         tSize+=groups[i]->totalHeight-groups[i]->size.y;
     }
-    totalHeight=tSize;
+    
+    totalHeight=maximizedSize+tSize;
+     
 }
 
 
@@ -124,7 +125,7 @@ void ofxJFControlPanel::drawController(){
     ofRectRounded(location.x, location.y, size.x, totalHeight,3);
     drawLabel();
     
-    if(!isMaximized){
+    if(isMaximized){
         for(int i = 0; i < groups.size(); i++){
             groups[i]->drawController();
         }
@@ -139,8 +140,18 @@ void ofxJFControlPanel::drawController(){
 void ofxJFControlPanel::mousePressed(int x, int y, int button){
     
     isMaximized=!isMaximized;
-  
     
-    //if(!isMaximized)
+    
+    if(isMaximized){
+        // maximize=true;
+        totalHeight=maximizedSize+tSize;
+        // cout<<"maximized"<<totalHeight<<endl;
+    }
+    else {
+        // minimize=true;
+        totalHeight=size.y;
+        //cout<<"minimized"<<totalHeight<<endl;
+    }
+
     
 }

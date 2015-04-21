@@ -24,6 +24,7 @@ ofxJFControlGroup::ofxJFControlGroup(string _name, int _x, int _y, int _width, i
     enableMouseEvents();
     
     addLabel(name, ofPoint(location.x+10,location.y+(size.y/2)));
+    setLabelColor(GROUP_LABEL_COLOR);
     backgroundColor = SLIDER_BACKGROUND_COLOR;
     
     widgetHeight=48;
@@ -64,8 +65,8 @@ void ofxJFControlGroup::update(){
     
     for (int i=0; i< controls.size(); i++){
         
-        if(controls[i]->maximize)widgetMaximized(i);
-        if(controls[i]->minimize)widgetMinimized(i);
+        if(controls[i]->maximize)relocateControls(i);
+        if(controls[i]->minimize)relocateControls(i);
         
         controls[i]->update();
     }
@@ -89,7 +90,18 @@ void ofxJFControlGroup::drawController(){
             
             controls[i]->drawController();
         }
+        
+        
+        ofSetColor(GROUP_LABEL_COLOR);
+        ofLine((location.x+size.x)-20, location.y+(size.y/2), (location.x+size.x)-10, location.y+(size.y/2));
+    }else{
+    
+        ofSetColor(GROUP_LABEL_COLOR);
+        ofLine((location.x+size.x)-20, location.y+(size.y/2), (location.x+size.x)-10, location.y+(size.y/2));
+        ofLine((location.x+size.x)-15, location.y+(size.y/2)-5, (location.x+size.x)-15, location.y+(size.y/2)+5);
     }
+    
+    
     
     drawLabel();
     ofPopStyle();
@@ -149,14 +161,54 @@ void ofxJFControlGroup::widgetMinimized(int _pos){
 }
 
 
-void ofxJFControlGroup::setLocation(ofPoint _location){
+
+
+
+void ofxJFControlGroup::relocateControls(int _pos){
+    
+    for (int i = _pos+1; i<controls.size(); i++) {
+        
+        int relocation=0;
+        
+        for(int p = 0; p < i; p++){
+            
+            relocation+=controls[p]->totalHeight;
+        }
+        
+            relocation+=controls[_pos]->size.y;
+            maximizedHeight=size.y+relocation+17;  /// 17 WHY CHECK THIS, WHY THIS VALUE??????? MISSING SOMETHING
+        
+            controls[i]->setLocation(ofPoint(controls[i]->location.x,relocation+location.y));
+    }
+    
+    if(isMaximized){
+        // maximize=true;
+        totalHeight=maximizedHeight;
+    }
+    else {
+        // minimize=true;
+        totalHeight=size.y;
+    }
+    
+    groupChangedSize=true;
+
+ 
+}
+
+
+
+
+void ofxJFControlGroup::setLocation(ofPoint _location){      //here
     
     
-    
+    int add=0;
     
     for(int i = 0; i< controls.size();i++){
         
-        controls[i]->setLocation(ofPoint(controls[i]->location.x,controls[i]->initialLocation.y+_location.y));
+        
+        if(i>0)if(controls[i-1]->isMaximized)add+=controls[i-1]->totalHeight-controls[i-1]->size.y;
+        
+        controls[i]->setLocation(ofPoint(controls[i]->location.x,controls[i]->initialLocation.y+_location.y+add));
     }
     
     location.y=initialLocation.y+_location.y;

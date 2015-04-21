@@ -33,7 +33,9 @@ public:
     int sliderPositionY;
     int sliderHeight;
     int  sliderOffsetX;
-    bool isMaximized;
+  
     vector<ofxJFWidget *> sliders;
     
+    
+    int maximizedHeight;
 };

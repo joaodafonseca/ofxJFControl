@@ -20,11 +20,12 @@ void ofxJFLabel::addLabel(string _label, ofPoint _location){
     labelLocation=_location;
     
     ofTrueTypeFont::setGlobalDpi(72);
-    font.loadFont("font/helvetica.ttf", 14, true, true);
-    //font.setLineHeight(18.0f);
+    font.loadFont("font/helvetica.ttf", 12, false);
+    font.setLineHeight(18.0f);
     //font.setLetterSpacing(1.037);
     drawFont=true;
     alignment=0;
+    labelColor.set(255);
     
 }
 
@@ -42,13 +43,16 @@ void ofxJFLabel::setLabel(string _label){
     label=_label;
 }
 
-
+void ofxJFLabel::setLabelColor(ofColor _labelColor){
+    
+    labelColor=_labelColor;
+}
 
 void ofxJFLabel::drawLabel(){
     
     if(drawFont){
         ofPushStyle();
-        ofSetColor(255);
+        ofSetColor(labelColor);
         ofRectangle bounds = font.getStringBoundingBox(label, 0, 0);
         ofPoint alignmentLoaction;
         

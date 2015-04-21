@@ -16,10 +16,10 @@ class ofxJFControlPanel: public ofxJFWidget, ofxJFLabel {
 public:
     
     ofxJFControlPanel();
-    ofxJFControlPanel(string _name, int _x, int _y, int _width, int _height=50);
+    ofxJFControlPanel(string _name, int _x, int _y, int _width, int _height=40);
     
     
-    void addGroup(string _name);
+    void createGroup(string _name);
     void addSlider(string _name, float _min, float _max);
     void addMultiSlider(string _name, float _min, float _max);
     
@@ -36,8 +36,9 @@ public:
     int offsetY;
     int offsetX;
     
-    bool isMaximized;
-    int minimizedSize;
+
+    int maximizedSize;
+    int tSize;
     
     vector<ofxJFControlGroup *> groups;
     

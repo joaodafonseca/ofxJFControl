@@ -21,6 +21,7 @@ public:
     
     void addLabel(string _label, ofPoint _location);
     void setLabel(string _label);
+    void setLabelColor(ofColor _labelColor);
     void setAlignment(int _alignment);
     void setLPosition(ofPoint _labelLocation);
     void drawLabel();
@@ -37,4 +38,5 @@ public:
     
 private:
      ofPoint labelLocation;
+        ofColor labelColor;
 };

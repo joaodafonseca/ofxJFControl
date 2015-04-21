@@ -42,6 +42,7 @@ public:
     int totalHeight;
     bool maximize;
     bool minimize;
+      bool isMaximized;
     bool groupChangedSize;
     
     ofColor panelColor;

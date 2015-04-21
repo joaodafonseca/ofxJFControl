@@ -31,7 +31,7 @@ ofxJFButton::ofxJFButton(string _name, int _x, int _y, int _width, int _height){
     state.setAlignment(JF_CENTER);
     maximize=false;
     minimize=false;
-    
+     isMaximized=false;
     initialLocation=location;
 }
 

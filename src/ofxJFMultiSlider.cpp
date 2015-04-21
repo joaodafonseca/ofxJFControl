@@ -44,8 +44,9 @@ ofxJFMultiSlider::ofxJFMultiSlider(string _name, float _min, float _max, int _x,
     sliders.push_back(new ofxJFSlider("y", min, max, location.x,sliderPositionY+(1*sliderHeight),size.x,sliderHeight));
     sliders.push_back(new ofxJFSlider("z", min, max, location.x,sliderPositionY+(2*sliderHeight),size.x,sliderHeight));
     
-    totalHeight=size.y+(sliders.size()*sliderHeight);
+    maximizedHeight=size.y+(sliders.size()*sliderHeight);
     
+    totalHeight=size.y;
     isMaximized=false;
     maximize=false;
     minimize=false;
@@ -81,16 +82,28 @@ void ofxJFMultiSlider::drawController(){
         ofSetColor(panelColor);
         ofLine(location.x, location.y, location.x+size.x, location.y);
         ofLine(location.x, location.y+totalHeight-1, location.x+size.x, location.y+totalHeight-1);
+        
+        ofSetColor(panelColor);
+        ofLine((location.x+size.x)-20, location.y+(size.y/2), (location.x+size.x)-10, location.y+(size.y/2));
 
     }else{
         
         ofSetColor(panelColor);
         ofRect(location.x,location.y, size.x, size.y);
+        ofSetColor(backgroundColor);
+        ofLine(location.x, location.y, location.x+size.x, location.y);
         
+        
+        ofSetColor(backgroundColor);
+        ofLine((location.x+size.x)-20, location.y+(size.y/2), (location.x+size.x)-10, location.y+(size.y/2));
+        ofLine((location.x+size.x)-15, location.y+(size.y/2)-5, (location.x+size.x)-15, location.y+(size.y/2)+5);
         
     }
     drawLabel();
     ofPopStyle();
+    
+
+
 }
 
 void ofxJFMultiSlider::setValue(float _value){
@@ -129,7 +142,7 @@ void ofxJFMultiSlider::mousePressed(int x, int y, int button){
     
     if(isMaximized){
         maximize=true;
-        
+        totalHeight=maximizedHeight;
         
         for (int i = 0; i< sliders.size(); i++) {
             sliders[i]->enableMouseEvents();
@@ -137,7 +150,7 @@ void ofxJFMultiSlider::mousePressed(int x, int y, int button){
 
     }else{
         minimize=true;
-        
+        totalHeight=size.y;
         for (int i = 0; i< sliders.size(); i++) {
             sliders[i]->disableMouseEvents();
         }
