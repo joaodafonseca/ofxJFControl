@@ -43,6 +43,26 @@ void ofApp::setup(){
 
     
     
+    
+    panel2 = ofxJFControlPanel("ofxJFPanel 2", 300, 10, 280);
+    
+    panel2.createGroup("Controls 1");
+    panel2.addSlider("slider1", 0, 550);
+    panel2.addSlider("slider2", 0, 550);
+    panel2.addSlider("slider3", 0, 550);
+    panel2.addSlider("slider4", 0, 550);
+    
+    panel2.createGroup("Controls 2");
+    panel2.addSlider("slider1", 0, 550);
+    panel2.addMultiSlider("multi slider", 0, 200);
+    panel2.addMultiSlider("multi slider", 0, 200);
+    panel2.addSlider("slider3", 0, 550);
+    panel2.addSlider("slider4", 0, 550);
+    
+    panel2.createGroup("Controls 3");
+    panel2.addSlider("slider1", 0, 550);
+    panel2.addSlider("slider1", 0, 550);
+    
     /*
      cg = ofxJFControlGroup("group", 300, 10, 260);
      cg.addSlider("slider 1", 0,100);
@@ -72,7 +92,8 @@ void ofApp::setup(){
 void ofApp::update(){
     ofSetWindowTitle(ofToString(ofGetFrameRate(), 1));
     panel.update();
-    cg.update();
+     panel2.update();
+   
 }
 
 //--------------------------------------------------------------
@@ -81,7 +102,8 @@ void ofApp::draw(){
     ofBackground(80);
     
     panel.drawController();
-    cg.drawController();
+        panel2.drawController();
+
     
 }
 
