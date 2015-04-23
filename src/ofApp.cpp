@@ -102,7 +102,7 @@ void ofApp::draw(){
     ofBackground(80);
     
     panel.drawController();
-        panel2.drawController();
+    panel2.drawController();
 
     
 }

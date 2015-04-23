@@ -86,7 +86,7 @@ void ofxJFControlPanel::update(){
         
         groups[i]->update();
     }
-       cout<<maximizedSize<<endl;
+       //cout<<maximizedSize<<endl;
 }
 
 
