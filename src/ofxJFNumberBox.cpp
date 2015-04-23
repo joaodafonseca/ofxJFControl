@@ -31,7 +31,7 @@ ofxJFNumberBox::ofxJFNumberBox(string _name, float _min, float _max, int _x, int
     enableKeyEvents();
     enableMouseEvents();
     
-    value=ofRandom(1);
+   // value=ofRandom(1);
     
     boxPositionX=location.x-size.x;
     boxPositionY=location.y-(size.x/4);
@@ -99,14 +99,14 @@ void ofxJFNumberBox::drawController(){
 
 void ofxJFNumberBox::setValue(float _value){
     
-    value=_value;
+    value=&_value;
     setLabel(ofToString(value,precision));
     
 }
 
 float ofxJFNumberBox::getValue(){
     
-    return value;
+    return *value;
 }
 
 
@@ -135,7 +135,7 @@ void ofxJFNumberBox::mouseReleased(int x, int y, int button){
     
     if(!hitTest(x, y) && updateValue){
         updateValue=false;
-        if(inputValue!="")value=ofClamp(ofToFloat(inputValue),min,max);
+        if(inputValue!="")*value=ofClamp(ofToFloat(inputValue),min,max);
         setLabel(ofToString(value,precision));
         inputValue="";
         updatedInputValue=true;
@@ -170,7 +170,7 @@ void ofxJFNumberBox::keyPressed(int key){
         
         }else if( key== 13 ){
             updateValue=false;
-            if(inputValue!="")value=ofClamp(ofToFloat(inputValue),min,max);
+            if(inputValue!="")*value=ofClamp(ofToFloat(inputValue),min,max);
             setLabel(ofToString(value,precision));
             inputValue="";
             updatedInputValue=true;

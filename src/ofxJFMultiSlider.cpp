@@ -17,7 +17,7 @@ ofxJFMultiSlider::ofxJFMultiSlider(string _name, float _min, float _max, int _x,
     
     name=_name;
     
-    value=ofRandom(1);
+    //value=ofRandom(1);
     min=_min;
     max=_max;
     

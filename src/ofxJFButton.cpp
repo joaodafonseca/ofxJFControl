@@ -62,7 +62,7 @@ void ofxJFButton::drawController(){
     ofSetColor(PANEL_COLOR);
     ofRectRounded(location.x, location.y, size.x, size.y,5);
     ofSetColor(255);
-    ofRectRounded(location.x, location.y, size.x*value, size.y,5);
+    ofRectRounded(location.x, location.y, size.x*(*value), size.y,5);
     
     ofNoFill();
     ofSetColor(0);
@@ -83,7 +83,7 @@ ofPoint ofxJFButton::getLocation(){
 
 void ofxJFButton::mousePressed(int x, int y, int button){
     updateValue=true;
-    value=!value;
+    //value=!value;
     state.setLabel(value? "on" : "off");
     
 }
