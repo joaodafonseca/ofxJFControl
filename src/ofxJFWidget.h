@@ -28,7 +28,7 @@ public:
     virtual void update();
     
     string name;
-    float * value;
+    float value;
     float max;
     float min;
     

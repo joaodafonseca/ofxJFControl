@@ -17,7 +17,6 @@ public:
     
     ofxJFSlider();
     ofxJFSlider(string _name, float _min, float _max, int _x, int _y, int _width, int _height);
-    ofxJFSlider(string _name, float &_var ,float _min, float _max, int _x, int _y, int _width, int _height);
     
     void setLabelPosition(ofPoint _labelLocation);
     void setLocation(ofPoint _location);

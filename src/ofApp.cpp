@@ -6,11 +6,11 @@ void ofApp::setup(){
     ofSetCircleResolution(20);
     ofEnableAntiAliasing();
     
-    val=30;
+    
     panel = ofxJFControlPanel("ofxJFPanel", 10, 10, 280);
     
     panel.createGroup("Controls 1");
-    panel.addSlider("slider1",val, 0, 550);
+    panel.addSlider("slider1", 0, 550);
     panel.addSlider("slider2", 0, 550);
     panel.addSlider("slider3", 0, 550);
     panel.addSlider("slider4", 0, 550);
@@ -85,7 +85,7 @@ void ofApp::setup(){
     cg.addSlider("slider 2", 0,100);
     
     */
-
+    
 }
 
 //--------------------------------------------------------------
@@ -93,7 +93,8 @@ void ofApp::update(){
     ofSetWindowTitle(ofToString(ofGetFrameRate(), 1));
     panel.update();
      panel2.update();
- }
+   
+}
 
 //--------------------------------------------------------------
 void ofApp::draw(){
@@ -101,10 +102,9 @@ void ofApp::draw(){
     ofBackground(80);
     
     panel.drawController();
-    panel2.drawController();
-    
-    cout<<val<<endl;
+        panel2.drawController();
 
+    
 }
 
 //--------------------------------------------------------------

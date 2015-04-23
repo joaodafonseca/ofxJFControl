@@ -63,11 +63,8 @@ void ofxJFControlPanel::createGroup(string _name){
 void ofxJFControlPanel::addSlider(string _name, float _min, float _max){
     
     if(groups.size())groups[groups.size()-1]->addSlider(_name,  _min,  _max);
-}
-
-void ofxJFControlPanel::addSlider(string _name, float &_val, float _min, float _max){
     
-    if(groups.size())groups[groups.size()-1]->addSlider(_name, _val, _min,  _max);
+    
 }
 
 void ofxJFControlPanel::addMultiSlider(string _name, float _min, float _max){
@@ -89,7 +86,7 @@ void ofxJFControlPanel::update(){
         
         groups[i]->update();
     }
-       //cout<<maximizedSize<<endl;
+       cout<<maximizedSize<<endl;
 }
 
 
