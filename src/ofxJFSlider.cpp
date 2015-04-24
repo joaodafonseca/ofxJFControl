@@ -62,8 +62,8 @@ ofxJFSlider::ofxJFSlider(string _name, float _min, float _max, int _x, int _y, i
     nb.setValue(tempValue);
     
     initialLocation=location;
-    minimize=false;
-    maximize=false;
+
+    widgetChangedSize=false;
 }
 
 
@@ -117,8 +117,8 @@ ofxJFSlider::ofxJFSlider(string _name, float &_var, float _min, float _max, int 
     nb.setValue(tempValue);
     
     initialLocation=location;
-    minimize=false;
-    maximize=false;
+    
+    widgetChangedSize=false;
 }
 
 
@@ -164,6 +164,7 @@ void ofxJFSlider::update(){
 
     
     if((nb.updatedInputValue || updateValue) && isVariableBinded)*variablePointer=float(ofMap(value,0,1,min,max));
+    
 }
 
 void ofxJFSlider::drawController(){

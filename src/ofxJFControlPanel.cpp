@@ -90,7 +90,7 @@ void ofxJFControlPanel::update(){
     
     for (int i = 0; i<groups.size(); i++) {
         
-        if(groups[i]->groupChangedSize){
+        if(groups[i]->widgetChangedSize){
             // cout<<groups[i]->totalHeight<<endl;
             relocateGroup(i);
         }

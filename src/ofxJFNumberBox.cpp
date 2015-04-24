@@ -51,11 +51,10 @@ ofxJFNumberBox::ofxJFNumberBox(string _name, float _min, float _max, int _x, int
     
     inputValue="";
    
-    maximize=false;
-    minimize=false;
+    widgetChangedSize=false;
     updateValue=false;
     updatedInputValue=false;
-     isMaximized=false;
+    isMaximized=false;
     initialLocation=location;
 }
 

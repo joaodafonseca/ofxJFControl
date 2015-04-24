@@ -33,9 +33,7 @@ ofxJFControlGroup::ofxJFControlGroup(string _name, int _x, int _y, int _width, i
     totalHeight=size.y;
     
     isMaximized=false;
-    maximize=false;
-    minimize=false;
-    groupChangedSize=false;
+    widgetChangedSize=false;
     
     
     initialLocation=location;
@@ -79,12 +77,11 @@ void ofxJFControlGroup::addMultiSlider(string _name, ofPoint &_var, float _min, 
 
 void ofxJFControlGroup::update(){
     
-     groupChangedSize=false;
+     widgetChangedSize=false;
     
     for (int i=0; i< controls.size(); i++){
         
-        if(controls[i]->maximize)relocateControls(i);
-        if(controls[i]->minimize)relocateControls(i);
+        if(controls[i]->widgetChangedSize)relocateControls(i);
         
         controls[i]->update();
     }
@@ -141,48 +138,9 @@ int ofxJFControlGroup::initialWigetYlocation(){
 }
 
 
-void ofxJFControlGroup::widgetMaximized(int _pos){
-    
-    maximizedHeight+=(controls[_pos]->totalHeight-controls[_pos]->size.y);
-    
-    for(int i = _pos+1; i< controls.size();i++){
-        
-        controls[i]->setLocation(ofPoint(controls[i]->location.x,controls[i]->location.y+(controls[_pos]->totalHeight-controls[_pos]->size.y)));
-    }
-    
-    if(isMaximized){
-        totalHeight=maximizedHeight;
-    }
-    else {
-        totalHeight=size.y;
-    }
-    groupChangedSize=true;
-}
-
-void ofxJFControlGroup::widgetMinimized(int _pos){
-    
-    maximizedHeight-=(controls[_pos]->totalHeight-controls[_pos]->size.y);
-    for(int i = _pos+1; i< controls.size();i++){
-        controls[i]->setLocation(ofPoint(controls[i]->location.x,controls[i]->location.y-((controls[_pos]->totalHeight-controls[_pos]->size.y))));
-        
-    }
-    
-    if(isMaximized){
-        // maximize=true;
-        totalHeight=maximizedHeight;
-    }
-    else {
-        // minimize=true;
-        totalHeight=size.y;
-    }
-    groupChangedSize=true;
-}
-
-
-
-
-
 void ofxJFControlGroup::relocateControls(int _pos){
+    
+    //cout<<controls[_pos]->name<<endl;
     
     for (int i = _pos+1; i<controls.size(); i++) {
         
@@ -208,7 +166,7 @@ void ofxJFControlGroup::relocateControls(int _pos){
         totalHeight=size.y;
     }
     
-    groupChangedSize=true;
+    widgetChangedSize=true;
 
  
 }
@@ -244,7 +202,7 @@ void ofxJFControlGroup::mousePressed(int x, int y, int button){
     
     if(hitTest(x, y, size.x, size.y)){
         isMaximized=!isMaximized;
-        groupChangedSize=true;
+        widgetChangedSize=true;
         
         if(isMaximized){
             // maximize=true;

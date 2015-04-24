@@ -17,6 +17,7 @@ public:
     ofxJFMultiSlider();
     ofxJFMultiSlider(string _name, float _min, float _max, int _x, int _y, int _width, int _height);
     ofxJFMultiSlider(string _name, ofPoint &_var, float _min, float _max, int _x, int _y, int _width, int _height);
+    ofxJFMultiSlider(string _name, ofVec2f &_var, float _min, float _max, int _x, int _y, int _width, int _height);
     
     void setLabelPosition(ofPoint _labelLocation);
     void setLocation(ofPoint _location);
@@ -33,7 +34,7 @@ public:
     
     int sliderPositionY;
     int sliderHeight;
-    int  sliderOffsetX;
+    int sliderOffsetX;
   
     vector<ofxJFWidget *> sliders;
     

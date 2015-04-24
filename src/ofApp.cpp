@@ -44,56 +44,7 @@ void ofApp::setup(){
     panel.addSlider("slider1", 0, 550);
     panel.addSlider("slider1", 0, 550);
 
-    
-    
-    
-    panel2 = ofxJFControlPanel("ofxJFPanel 2", 300, 10, 280);
-    
-    panel2.createGroup("Controls 1");
-    panel2.addSlider("slider1", 0, 550);
-    panel2.addSlider("slider2", 0, 550);
-    panel2.addSlider("slider3", 0, 550);
-    panel2.addSlider("slider4", 0, 550);
-    
-    panel2.createGroup("Controls 2");
-    panel2.addSlider("slider1", 0, 550);
-    panel2.addMultiSlider("multi slider", 0, 200);
-    panel2.addMultiSlider("multi slider", 0, 200);
-    panel2.addSlider("slider3", 0, 550);
-    panel2.addSlider("slider4", 0, 550);
-    
-    panel2.createGroup("Controls 3");
-    panel2.addSlider("slider1", 0, 550);
-    panel2.addSlider("slider1", 0, 550);
-    
-    /*
-     cg = ofxJFControlGroup("group", 300, 10, 260);
-     cg.addSlider("slider 1", 0,100);
-     cg.addSlider("slider 2", 0,100);
-     cg.addMultiSlider("multi 1", 0, 100);
-     cg.addSlider("slider 3", 0,100);
-     cg.addSlider("slider 3", 0,100);
-     cg.addSlider("slider 1", 0,100);
-     cg.addSlider("slider 2", 0,100);
-     cg.addMultiSlider("multi 1", 0, 100);
-     cg.addSlider("slider 1", 0,100);
-     cg.addSlider("slider 2", 0,100);
-    cg.addSlider("slider 2", 0,100);
-    cg.addMultiSlider("multi 1", 0, 100);
-    cg.addSlider("slider 1", 0,100);
-    cg.addSlider("slider 2", 0,100);
-    cg.addMultiSlider("multi 1", 0, 100);
-    cg.addSlider("slider 1", 0,100);
-    cg.addSlider("slider 2", 0,100);
-    cg.addSlider("slider 2", 0,100);
-    
-    */
-    //float &temp=float(10);
-    
-    //pointer=&variable;
-    
-    //pointer=&variable;
-    
+
 }
 
 //--------------------------------------------------------------
@@ -114,8 +65,6 @@ void ofApp::draw(){
     
     panel.drawController();
     panel2.drawController();
-    
-    // *pointer=ofGetMouseX();
 
  
 }

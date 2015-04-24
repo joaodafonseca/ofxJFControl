@@ -44,10 +44,8 @@ public:
     bool labelIsVisible;
   
     int totalHeight;
-    bool maximize;
-    bool minimize;
     bool isMaximized;
-    bool groupChangedSize;
+    bool widgetChangedSize;
     
     ofColor panelColor;
     ofColor backgroundColor;
