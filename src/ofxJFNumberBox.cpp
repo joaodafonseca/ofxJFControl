@@ -114,6 +114,8 @@ void ofxJFNumberBox::mousePressed(int x, int y, int button){
     mousePressedLocation.set(x,y);
     //value=ofMap(ofClamp(x, location.x, location.x+size.x),location.x, location.x+size.x,0,1);
     
+    updateValue=true;
+    setLabel(inputValue);
 
 
 }
@@ -146,8 +148,8 @@ void ofxJFNumberBox::mouseReleased(int x, int y, int button){
 }
 
 void ofxJFNumberBox::doubleClick(int x, int y, int button){
-    updateValue=true;
-    setLabel(inputValue);
+//    updateValue=true;
+//    setLabel(inputValue);
 
 
 }

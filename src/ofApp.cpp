@@ -6,19 +6,22 @@ void ofApp::setup(){
     ofSetCircleResolution(20);
     ofEnableAntiAliasing();
     
+    variable=30;
+    multiPoint.set(20,50,200);
+    multivec.set(20,50,200);
     
     panel = ofxJFControlPanel("ofxJFPanel", 10, 10, 280);
     
     panel.createGroup("Controls 1");
-    panel.addSlider("slider1", 0, 550);
+    panel.addSlider("slider1", variable, 0, 550);
     panel.addSlider("slider2", 0, 550);
     panel.addSlider("slider3", 0, 550);
     panel.addSlider("slider4", 0, 550);
     
     panel.createGroup("Controls 2");
     panel.addSlider("slider1", 0, 550);
-    panel.addMultiSlider("multi slider", 0, 200);
-    panel.addMultiSlider("multi slider", 0, 200);
+    panel.addMultiSlider("multi slider", multiPoint, 0, 200);
+    panel.addMultiSlider("multi slider", multivec, 0, 200);
     panel.addSlider("slider3", 0, 550);
     panel.addSlider("slider4", 0, 550);
     
@@ -85,14 +88,22 @@ void ofApp::setup(){
     cg.addSlider("slider 2", 0,100);
     
     */
+    //float &temp=float(10);
+    
+    //pointer=&variable;
+    
+    //pointer=&variable;
     
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     ofSetWindowTitle(ofToString(ofGetFrameRate(), 1));
+    
     panel.update();
-     panel2.update();
+    panel2.update();
+    
+    //cout<<multivec<<endl;
    
 }
 
@@ -103,8 +114,10 @@ void ofApp::draw(){
     
     panel.drawController();
     panel2.drawController();
-
     
+    // *pointer=ofGetMouseX();
+
+ 
 }
 
 //--------------------------------------------------------------

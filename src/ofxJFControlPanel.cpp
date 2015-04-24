@@ -64,6 +64,11 @@ void ofxJFControlPanel::addSlider(string _name, float _min, float _max){
     
     if(groups.size())groups[groups.size()-1]->addSlider(_name,  _min,  _max);
     
+}
+
+void ofxJFControlPanel::addSlider(string _name, float &_var, float _min, float _max){
+    
+    if(groups.size())groups[groups.size()-1]->addSlider(_name, _var, _min,  _max);
     
 }
 
@@ -71,6 +76,13 @@ void ofxJFControlPanel::addMultiSlider(string _name, float _min, float _max){
     
     
     if(groups.size())groups[groups.size()-1]->addMultiSlider(_name,  _min,  _max);
+    
+}
+
+void ofxJFControlPanel::addMultiSlider(string _name, ofPoint &_var, float _min, float _max){
+    
+    
+    if(groups.size())groups[groups.size()-1]->addMultiSlider(_name, _var, _min,  _max);
     
 }
 

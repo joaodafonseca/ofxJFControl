@@ -29,6 +29,10 @@ public:
     
     string name;
     float value;
+   
+    float * variablePointer;
+    bool isVariableBinded;
+    
     float max;
     float min;
     

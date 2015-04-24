@@ -16,6 +16,7 @@ class ofxJFMultiSlider: public ofxJFWidget, ofxJFLabel{
 public:
     ofxJFMultiSlider();
     ofxJFMultiSlider(string _name, float _min, float _max, int _x, int _y, int _width, int _height);
+    ofxJFMultiSlider(string _name, ofPoint &_var, float _min, float _max, int _x, int _y, int _width, int _height);
     
     void setLabelPosition(ofPoint _labelLocation);
     void setLocation(ofPoint _location);

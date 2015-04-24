@@ -55,6 +55,51 @@ ofxJFMultiSlider::ofxJFMultiSlider(string _name, float _min, float _max, int _x,
     
 }
 
+
+ofxJFMultiSlider::ofxJFMultiSlider(string _name, ofPoint &_var, float _min, float _max, int _x, int _y, int _width, int _height){
+    
+    name=_name;
+    
+    value=ofRandom(1);
+    min=_min;
+    max=_max;
+    
+    location.set(_x, _y);
+    
+    size.set(_width, _height/1.6);
+    
+    setEventArea(location, size);
+    enableMouseEvents();
+    sliders.clear();
+    panelColor = PANEL_COLOR;
+    backgroundColor = SLIDER_BACKGROUND_COLOR;
+    
+    
+    sliderPositionY=location.y+size.y;
+    sliderHeight=_height;
+    
+    sliderOffsetX=10;
+    
+    addLabel(name, ofPoint(location.x+sliderOffsetX,location.y+size.y/2));
+    
+    //for 3 sliders
+    sliders.push_back(new ofxJFSlider("x", _var.x, min, max, location.x,sliderPositionY+(0*sliderHeight),size.x,sliderHeight));
+    sliders.push_back(new ofxJFSlider("y", _var.y, min, max, location.x,sliderPositionY+(1*sliderHeight),size.x,sliderHeight));
+    sliders.push_back(new ofxJFSlider("z", _var.z, min, max, location.x,sliderPositionY+(2*sliderHeight),size.x,sliderHeight));
+    
+    maximizedHeight=size.y+(sliders.size()*sliderHeight);
+    
+    totalHeight=size.y;
+    isMaximized=false;
+    maximize=false;
+    minimize=false;
+    
+    initialLocation=location;
+    
+}
+
+
+
 void ofxJFMultiSlider::update(){
     
     for (int i = 0; i< sliders.size(); i++) {

@@ -68,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		141301201AEA45D200B22B86 /* TODO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TODO.h; sourceTree = "<group>"; };
 		14EB4FE31AD7102300562436 /* ofxJFButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxJFButton.cpp; sourceTree = "<group>"; };
 		14EB4FE41AD7102300562436 /* ofxJFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFButton.h; sourceTree = "<group>"; };
 		14EB4FE51AD7102300562436 /* ofxJFColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxJFColors.h; sourceTree = "<group>"; };
@@ -143,6 +144,7 @@
 		14EB4FFD1AD7107900562436 /* ofxJFControl */ = {
 			isa = PBXGroup;
 			children = (
+				141301201AEA45D200B22B86 /* TODO.h */,
 				14EB4FFE1AD7109D00562436 /* widgets */,
 				14EB4FFF1AD710B500562436 /* utils */,
 				14EB50001AD710BE00562436 /* groups and panel */,

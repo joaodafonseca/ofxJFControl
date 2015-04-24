@@ -20,7 +20,12 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-    ofxJFControlPanel panel;
+     ofxJFControlPanel panel;
      ofxJFControlPanel panel2;
+    
+    
+    float variable;
+    ofPoint multiPoint;
+    ofVec3f multivec;
  
 };

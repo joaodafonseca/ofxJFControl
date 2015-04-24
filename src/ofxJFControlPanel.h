@@ -21,7 +21,10 @@ public:
     
     void createGroup(string _name);
     void addSlider(string _name, float _min, float _max);
+    void addSlider(string _name, float &_var, float _min, float _max);
+    
     void addMultiSlider(string _name, float _min, float _max);
+    void addMultiSlider(string _name, ofPoint &_var, float _min, float _max);
     
     void relocateGroup(int _pos);
 

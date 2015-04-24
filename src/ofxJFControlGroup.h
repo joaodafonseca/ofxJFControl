@@ -17,7 +17,10 @@ public:
     ofxJFControlGroup(string _name, int _x, int _y, int _width, int _height=30);
     
     void addSlider(string _name, float _min, float _max);
+    void addSlider(string _name, float &_var, float _min, float _max);
+    
     void addMultiSlider(string _name, float _min, float _max);
+    void addMultiSlider(string _name, ofPoint &_var, float _min, float _max);
     
     void drawController();
     void update();

@@ -50,9 +50,27 @@ void ofxJFControlGroup::addSlider(string _name, float _min, float _max){
     maximizedHeight+=controls[controls.size()-1]->size.y;
 }
 
+
+void ofxJFControlGroup::addSlider(string _name, float &_var, float _min, float _max){
+    
+    int yLoc=initialWigetYlocation();
+    controls.push_back(new ofxJFSlider(_name, _var, _min, _max, location.x, yLoc,size.x,widgetHeight));
+    
+    maximizedHeight+=controls[controls.size()-1]->size.y;
+}
+
+
+
 void ofxJFControlGroup::addMultiSlider(string _name, float _min, float _max){
     int yLoc=initialWigetYlocation();
     controls.push_back(new ofxJFMultiSlider(_name, _min, _max, location.x, yLoc,size.x,widgetHeight));
+    
+    maximizedHeight+=controls[controls.size()-1]->size.y;
+}
+
+void ofxJFControlGroup::addMultiSlider(string _name, ofPoint &_var, float _min, float _max){
+    int yLoc=initialWigetYlocation();
+    controls.push_back(new ofxJFMultiSlider(_name, _var, _min, _max, location.x, yLoc,size.x,widgetHeight));
     
     maximizedHeight+=controls[controls.size()-1]->size.y;
 }
