@@ -10,6 +10,7 @@
  
  - multiSlider size when expand, it's harcoded why the need to add that value?
  - ofxJFControl main class to manage all UI
+ - create methods for multislider ofVec2f
  - save and load preset
  - more controls
  - scroll bar
